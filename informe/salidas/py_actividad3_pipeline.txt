@@ -1,0 +1,13 @@
+Pipeline: buscar_estudiante -> validar_ppa_minimo -> inscribir(SIS206)
+
+codigo=1001 -> EXITO: Juan Mamani inscrito en SIS206
+codigo=9999 -> FALLO: Código 9999 no existe
+codigo=1002 -> FALLO: PPA 10.5 < 12.0 (mínimo para inscribirse)
+codigo=1003 -> FALLO: Luis Condori ya está inscrito en SIS206
+
+map() sobre un resultado exitoso:
+  nombre en mayúsculas = JUAN MAMANI
+map() sobre un fallo (la función NO se ejecuta):
+  llamadas a la función = 0, error propagado = Código 9999 no existe
+
+Result es inmutable: FrozenInstanceError

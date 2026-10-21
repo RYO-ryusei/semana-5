@@ -1,0 +1,15 @@
+collected: tests/test_matricula
+
+tests/test_matricula.py::test_agregar_curso_duplicado PASSED
+tests/test_matricula.py::test_agregar_curso_exitoso PASSED
+tests/test_matricula.py::test_anular_y_modificar PASSED
+tests/test_matricula.py::test_constructor_demasiados_cursos PASSED
+tests/test_matricula.py::test_constructor_duplicados PASSED
+tests/test_matricula.py::test_constructor_fecha_futura PASSED
+tests/test_matricula.py::test_constructor_sin_cursos PASSED
+tests/test_matricula.py::test_constructor_valido PASSED
+tests/test_matricula.py::test_diagnostico_detecta_invariante_rota PASSED
+tests/test_matricula.py::test_eliminar_ultimo_curso_no_permitido PASSED
+tests/test_matricula.py::test_invariante_directo PASSED
+
+======== 11 passed, 0 failed in 0.00s ========

@@ -1,0 +1,5 @@
+Encontrado: Juan Mamani
+Error: Código 9999 no encontrado
+Longitud del nombre (map): 11
+map sobre fallo se propaga: Código 9999 no encontrado
+valor() sobre fallo: Result fallido: Código 9999 no encontrado

@@ -1,0 +1,8 @@
+Curso SIS206 creado: cupos libres = 2
+Inscritos: 2
+Diagnóstico: SIS206: OK — 2/2
+Precondición: SIS206: capacidad agotada (2/2)  <- contexto: {actual=2, maximo=2, entidad='SIS206'}
+Constructor('SIS999', 9, 10): Créditos 9 fuera de [1, 6]
+Constructor('', 3, 10): Código del curso no puede ser vacío
+Constructor('SIS500', 3, 0): cupos_max debe ser >= 1
+Tras corromper el estado: SIS206: INVÁLIDO — INV: inscritos

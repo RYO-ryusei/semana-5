@@ -1,0 +1,5 @@
+Curso SIS206 creado: cupos libres = 2
+Inscritos: 2/2
+Precondición: [Académico] SIS206: capacidad agotada (2/2)  (2/2)
+Constructor: [Académico] [Validación] Créditos deben estar en [1, 6]
+Constructor: [Académico] [Validación] Código del curso no puede ser vacío

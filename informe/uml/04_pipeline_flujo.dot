@@ -1,0 +1,13 @@
+digraph G { rankdir=TB; graph [fontname="DejaVu Sans", bgcolor="white", pad=0.3, nodesep=0.45, ranksep=0.55]; node [fontname="DejaVu Sans", fontsize=11, style=filled, color="#1F4E79", fillcolor="#EAF2FB", penwidth=1.3, shape=box, style="rounded,filled"]; edge [fontname="DejaVu Sans", fontsize=10, color="#1F4E79"];
+ ini [shape=circle, label="", width=0.25, fillcolor="#1F4E79"];
+ a [label="buscar_estudiante\n(codigo)"]; b [label="validar_ppa_minimo\n(est)"]; c [label="inscribir\n(est, \"SIS206\")"];
+ ok [label="Result.ok\n«inscrito en SIS206»", fillcolor="#E2F0D9", color="#548235"];
+ f1 [label="fallo:\nCódigo no existe", fillcolor="#FBE5D6", color="#C55A11"];
+ f2 [label="fallo:\nPPA < 12.0", fillcolor="#FBE5D6", color="#C55A11"];
+ f3 [label="fallo:\nya inscrito", fillcolor="#FBE5D6", color="#C55A11"];
+ fin [shape=doublecircle, label="", width=0.2, fillcolor="#1F4E79"];
+ {rank=same; a; f1} {rank=same; b; f2} {rank=same; c; f3}
+ ini -> a; a -> b [label="ok"]; b -> c [label="ok"]; c -> ok [label="ok"]; ok -> fin;
+ a -> f1 [label="fallo", style=dashed, color="#C55A11", fontcolor="#C55A11"]; b -> f2 [label="fallo", style=dashed, color="#C55A11", fontcolor="#C55A11"]; c -> f3 [label="fallo", style=dashed, color="#C55A11", fontcolor="#C55A11"];
+ f1 -> fin [style=dashed, color="#C55A11"]; f2 -> fin [style=dashed, color="#C55A11"]; f3 -> fin [style=dashed, color="#C55A11"];
+}

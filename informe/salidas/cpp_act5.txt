@@ -1,0 +1,15 @@
+Repositorio con 2 estudiantes
+
+--- Result<T> en la búsqueda (fallo esperado) ---
+buscar(1001) -> Juan Mamani
+buscar(9999) -> FALLO: Estudiante id=9999 no encontrado
+
+--- Excepciones en las precondiciones (error de uso) ---
+ErrorDatoInvalido(campo=ppa): [Dominio] Dato inválido en 'ppa': debe estar en [0, 20]
+ErrorEntidadDuplicada: [Dominio] Estudiante id=1001 ya existe
+ErrorEntidadNoEncontrada: [Dominio] Estudiante id=4242 no encontrado
+
+--- Seccion con DbC ---
+Inscritos 2, cupos libres 0
+ErrorCupoAgotado: [Dominio] Sección POO II - A sin cupos (2/2)
+Captura por familia (ErrorDominio&): [Dominio] Sección X sin cupos (2/2)

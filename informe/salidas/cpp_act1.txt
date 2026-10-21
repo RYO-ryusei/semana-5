@@ -1,0 +1,14 @@
+=== Parte A: ErrorMatriculaDuplicada ===
+Matriculando código 20210502 ... OK
+Matriculando código 20210500 ... DUPLICADA
+  catch ErrorMatriculaDuplicada -> codigo_estudiante=20210500
+  [Académico] [Validación] Matrícula duplicada para el estudiante 20210500
+
+=== Captura selectiva: una sola rama atrapa a sus hijos ===
+ErrorValidacion atrapó una ErrorCalificacion: [Académico] [Validación] Calificación -3.50 fuera de rango [0, 20]
+
+=== Polimorfismo: captura por referencia a la base ===
+what() via ErrorAcademico&: [Académico] matricula: capacidad agotada (6/6)
+
+=== noexcept en los getters ===
+noexcept(ec.valor()) = true

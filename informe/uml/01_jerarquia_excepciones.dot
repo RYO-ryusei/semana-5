@@ -1,0 +1,14 @@
+digraph G { rankdir=BT; graph [fontname="DejaVu Sans", bgcolor="white", pad=0.3, nodesep=0.5, ranksep=0.7]; node [shape=record, fontname="DejaVu Sans", fontsize=11, style=filled, fillcolor="#EAF2FB", color="#1F4E79", penwidth=1.3]; edge [fontname="DejaVu Sans", fontsize=10, color="#1F4E79"];
+ std [label="{«C++» std::exception|+ what() const noexcept}", fillcolor="#F2F2F2", color="#7F7F7F"];
+ rt  [label="{std::runtime_error|}", fillcolor="#F2F2F2", color="#7F7F7F"];
+ pyex[label="{«Python» Exception|}", fillcolor="#F2F2F2", color="#7F7F7F"];
+ ea  [label="{ErrorAcademico|+ contexto : dict  «Python»|+ ~ErrorAcademico() virtual  «C++»\l+ __str__() : str  «Python»\l}", fillcolor="#D9E8F7"];
+ ev  [label="{ErrorValidacion|datos de entrada inválidos|}"];
+ ec  [label="{ErrorCapacidad|- actual_ : int\l- maximo_ : int\l|+ actual() noexcept : int\l+ maximo() noexcept : int\l}"];
+ er  [label="{ErrorRecursoNoEncontrado|- tipo_ : string\l- id_ : int\l|+ tipo() noexcept\l+ id() noexcept\l}"];
+ ecal[label="{ErrorCalificacion|- valor_ : float|+ valor() noexcept : float\l}"];
+ emd [label="{ErrorMatriculaDuplicada|- codigo_estudiante_ : string|+ codigo_estudiante() noexcept\l}", fillcolor="#FFF2CC", color="#BF9000"];
+ rt -> std [arrowhead=empty]; ea -> rt [arrowhead=empty, label=" C++"]; ea -> pyex [arrowhead=empty, label=" Python"];
+ ev -> ea [arrowhead=empty]; ec -> ea [arrowhead=empty]; er -> ea [arrowhead=empty];
+ ecal -> ev [arrowhead=empty]; emd -> ev [arrowhead=empty];
+}

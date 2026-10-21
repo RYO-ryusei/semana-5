@@ -1,0 +1,7 @@
+digraph G { rankdir=TB; graph [fontname="DejaVu Sans", bgcolor="white", pad=0.3, nodesep=0.5, ranksep=0.7]; node [shape=record, fontname="DejaVu Sans", fontsize=11, style=filled, fillcolor="#EAF2FB", color="#1F4E79", penwidth=1.3]; edge [fontname="DejaVu Sans", fontsize=10, color="#1F4E79"];
+ mat [label="{Matricula|«invariante» 1 ≤ cursos ≤ 6, sin duplicados, fecha ≤ hoy\l- estudiante_codigo_ : string\l- cursos_ : vector⟨string⟩\l- fecha_ : Fecha\l- anulada_ : bool\l+ MAX_CURSOS : int = 6\l|+ Matricula(cod, cursos, fecha)\l+ agregarCurso(curso)\l+ eliminarCurso(curso)\l+ anular()\l+ diagnostico() : string\l- verificarInvariante()\l+ numCursos() noexcept : int\l+ anulada() noexcept : bool\l}", fillcolor="#D9E8F7"];
+ cur [label="{Curso|«invariante» 0 ≤ inscritos ≤ cupos_max, créditos ∈ [1,6]\l- codigo_ : string\l- creditos_ : int\l- cupos_max_ : int\l- inscritos_ : int\l|+ Curso(codigo, creditos, cuposMax)\l+ inscribir()\l- verificarInvariante()\l+ cuposLibres() noexcept : int\l}", fillcolor="#D9E8F7"];
+ ev [label="{ErrorValidacion||}"]; ec [label="{ErrorCapacidad||}"]; ea [label="{ErrorAcademico||}"];
+ mat -> ev [style=dashed, arrowhead=open, label="«throws»\lprecondición"]; mat -> ec [style=dashed, arrowhead=open, label="«throws»\lprecondición"]; mat -> ea [style=dashed, arrowhead=open, label="«throws»\lmatrícula anulada"];
+ cur -> ev [style=dashed, arrowhead=open, label="«throws»"]; cur -> ec [style=dashed, arrowhead=open, label="«throws»"];
+}

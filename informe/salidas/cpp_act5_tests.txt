@@ -1,0 +1,10 @@
+[PASS] estudiante válido y actualizarPPA
+[PASS] sección inscribe dentro del cupo
+[PASS] buscar() devuelve Result ok / fallo sin lanzar
+[PASS] PPA inválido: [Dominio] Dato inválido en 'ppa': debe estar en [0, 20]
+[PASS] cupo agotado: [Dominio] Sección S sin cupos (1/1)
+[PASS] duplicado: [Dominio] Estudiante id=1 ya existe
+[PASS] obtener inexistente (por familia): [Dominio] Estudiante id=77 no encontrado
+[PASS] inscripción repetida: [Dominio] Inscripción id=1 ya existe
+
+Todas las pruebas pasaron (8).

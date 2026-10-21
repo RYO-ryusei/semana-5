@@ -1,0 +1,15 @@
+=== Parte B: ErrorMatriculaDuplicada ===
+Matriculando código 20210502 ... OK
+Matriculando código 20210500 ... DUPLICADA
+  except ErrorMatriculaDuplicada -> codigo_estudiante=20210500
+  Matrícula duplicada para el estudiante 20210500  <- contexto: {codigo_estudiante='20210500'}
+
+=== Captura por familia ===
+ErrorValidacion atrapó una ErrorCalificacion: Calificación -3.5 fuera de [0, 20]  <- contexto: {campo='POO II', valor=-3.5, rango='[0, 20]'}
+
+=== Contexto rico del error (diccionario) ===
+contexto = {'actual': 6, 'maximo': 6, 'entidad': 'matrícula'}
+
+=== raise ... from ...: preserva la causa original ===
+Error de dominio: Nota con id=9999 no encontrado  <- contexto: {tipo='Nota', id=9999}
+__cause__       : KeyError(9999)

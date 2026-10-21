@@ -1,0 +1,8 @@
+codigo=1001 -> Beca asignada: Juan Mamani
+codigo=1002 -> No se pudo asignar beca: PPA 12.0 < 14.0 (mínimo para beca)
+codigo=9999 -> No se pudo asignar beca: Código 9999 no existe
+
+map() transforma un valor; and_then() encadena pasos que devuelven Result:
+  map      -> JUAN MAMANI
+  map fallo-> Código 9999 no existe
+  valor sobre fallo -> Result fallido: Código 9999 no existe

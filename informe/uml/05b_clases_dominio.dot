@@ -1,0 +1,9 @@
+digraph G { rankdir=TB; graph [fontname="DejaVu Sans", bgcolor="white", pad=0.3, nodesep=0.6, ranksep=0.8]; node [shape=record, fontname="DejaVu Sans", fontsize=11, style=filled, fillcolor="#EAF2FB", color="#1F4E79", penwidth=1.3]; edge [fontname="DejaVu Sans", fontsize=10, color="#1F4E79"];
+ rep[label="{RepositorioEstudiantes|- datos_ : map\<int, Estudiante\>|+ agregar(est)\l+ obtener(codigo) : Estudiante  «throws»\l+ buscar(codigo) : Result\<Estudiante\>\l}", fillcolor="#E2F0D9", color="#548235"];
+ sec[label="{Seccion|«inv» 0 ≤ inscritos ≤ cupos, sin repetidos\l- nombre_ : string\l- cupos_ : int\l- inscritos_ : vector\<int\>\l|+ inscribir(est)\l- verificarInvariante()\l}", fillcolor="#E2F0D9", color="#548235"];
+ est[label="{Estudiante|«inv» código \> 0, nombre no vacío, 0 ≤ ppa ≤ 20\l- codigo_ : int\l- nombre_ : string\l- ppa_ : double\l|+ actualizarPPA(nuevo)\l- verificarInvariante()\l}", fillcolor="#E2F0D9", color="#548235"];
+ res[label="{Result\<T\>||}", fillcolor="#FFF2CC", color="#BF9000"];
+ err[label="{«excepciones» ErrorDominio y sus hijas|ErrorDatoInvalido\lErrorEntidadDuplicada\lErrorEntidadNoEncontrada\lErrorCupoAgotado\l|}", fillcolor="#D9E8F7"];
+ rep -> est [arrowhead=odiamond, label=" 0..*"]; sec -> est [style=dashed, arrowhead=open, label=" usa"]; rep -> res [style=dashed, arrowhead=open, label=" «crea»"];
+ est -> err [style=dashed, arrowhead=open, label=" «throws»"]; sec -> err [style=dashed, arrowhead=open, label=" «throws»"]; rep -> err [style=dashed, arrowhead=open, label=" «throws»"];
+}

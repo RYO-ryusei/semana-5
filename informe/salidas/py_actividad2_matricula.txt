@@ -1,0 +1,24 @@
+=== Constructor (precondiciones) ===
+- matrícula válida: OK
+- código vacío: ErrorValidacion -> Código de estudiante vacío
+- sin cursos: ErrorCapacidad -> matrícula: capacidad agotada (0/6)  <- contexto: {actual=0, maximo=6, entidad='matrícula'}
+- 7 cursos: ErrorCapacidad -> matrícula: capacidad agotada (7/6)  <- contexto: {actual=7, maximo=6, entidad='matrícula'}
+- cursos duplicados: ErrorValidacion -> Cursos duplicados en la matrícula
+- fecha futura: ErrorValidacion -> Fecha futura no permitida: 2026-10-21
+
+=== Mutadores (pre + pos + invariante) ===
+Matrícula [ACTIVA] — 1/6 cursos
+- agregar SIS207: OK
+- agregar SIS207 otra vez: ErrorValidacion -> Curso 'SIS207' ya está en la matrícula
+- eliminar SIS207: OK
+- eliminar el último curso: ErrorValidacion -> La matrícula no puede quedar sin cursos (mínimo 1)
+Matrícula [ACTIVA] — 6/6 cursos
+- agregar un 7.° curso: ErrorCapacidad -> matrícula: capacidad agotada (6/6)  <- contexto: {actual=6, maximo=6, entidad='matrícula'}
+
+=== Anulación ===
+Matrícula [ANULADA] — 6/6 cursos
+- agregar con matrícula anulada: ErrorAcademico -> Matrícula anulada — no se puede modificar
+- anular por segunda vez: ErrorAcademico -> Matrícula ya está anulada
+
+=== diagnostico() detecta una invariante rota ===
+INVÁLIDA: INV: duplicados

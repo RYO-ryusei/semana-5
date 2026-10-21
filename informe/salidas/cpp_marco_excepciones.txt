@@ -1,0 +1,11 @@
+--- Nota 25 (fuera de rango) ---
+[catch ErrorCalificacion] valor=25
+  [Académico] [Validación] Calificación 25.00 fuera de rango [0, 20]
+--- Nota 15 (válida) ---
+Sin errores
+--- Capacidad agotada ---
+[catch ErrorAcademico] [Académico] SIS206: capacidad agotada (30/30)
+--- Recurso inexistente ---
+[catch ErrorAcademico] [Académico] Estudiante id=9999 no encontrado
+--- Error estándar ---
+[catch std::exception] índice fuera de rango

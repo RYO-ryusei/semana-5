@@ -1,0 +1,12 @@
+collected: tests/test_dominio
+
+tests/test_dominio.py::test_buscar_result PASSED
+tests/test_dominio.py::test_cupo_agotado PASSED
+tests/test_dominio.py::test_estudiante_valido PASSED
+tests/test_dominio.py::test_inscripcion_repetida PASSED
+tests/test_dominio.py::test_obtener_no_encontrado_por_familia PASSED
+tests/test_dominio.py::test_ppa_fuera_de_rango PASSED
+tests/test_dominio.py::test_repositorio_duplicado PASSED
+tests/test_dominio.py::test_seccion_inscribe PASSED
+
+======== 8 passed, 0 failed in 0.03s ========

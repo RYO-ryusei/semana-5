@@ -1,0 +1,21 @@
+=== Constructor (precondiciones) ===
+- matrícula válida: OK
+- código vacío: ErrorValidacion -> [Académico] [Validación] Código de estudiante vacío
+- sin cursos: ErrorCapacidad -> [Académico] matricula: capacidad agotada (0/6)
+- 7 cursos: ErrorCapacidad -> [Académico] matricula: capacidad agotada (7/6)
+- cursos duplicados: ErrorValidacion -> [Académico] [Validación] Cursos duplicados en la matrícula
+- fecha futura: ErrorValidacion -> [Académico] [Validación] Fecha de matrícula futura no permitida
+
+=== Mutadores (pre + pos + invariante) ===
+Matrícula [ACTIVA] — 1/6 cursos
+- agregar SIS207: OK
+- agregar SIS207 otra vez: ErrorValidacion -> [Académico] [Validación] Curso 'SIS207' ya está en la matrícula
+- eliminar SIS207: OK
+- eliminar el último curso: ErrorValidacion -> [Académico] [Validación] La matrícula no puede quedar sin cursos (mínimo 1)
+Matrícula [ACTIVA] — 6/6 cursos
+- agregar un 7.° curso: ErrorCapacidad -> [Académico] matricula: capacidad agotada (6/6)
+
+=== Anulación ===
+Matrícula [ANULADA] — 6/6 cursos
+- agregar con matrícula anulada: ErrorAcademico -> [Académico] Matrícula anulada — no se puede modificar
+- anular por segunda vez: ErrorAcademico -> [Académico] Matrícula ya está anulada

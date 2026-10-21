@@ -1,0 +1,9 @@
+$ g++ -std=c++17 -Wall -Wextra result.hpp   (código original del marco 2.5, con T = std::string)
+result.hpp:26:14: error: 'Result<T>::Result(std::string)' cannot be overloaded with 'Result<T>::Result(T)'
+                         [with T = std::string]
+result.hpp:37:29: error: 'cout' is not a member of 'std'
+result.hpp:38:15: error: 'cerr' is not a member of 'std'
+
+$ g++ -std=c++17 -Wall -Wextra matricula.hpp  (código original de la Actividad 2)
+matricula.hpp:15:30: error: invalid operands of types 'const char [13]' and 'const char*'
+                         to binary 'operator+'

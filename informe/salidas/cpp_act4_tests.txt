@@ -1,0 +1,12 @@
+[PASS] constructor válido
+[PASS] constructor sin cursos: [Académico] matricula: capacidad agotada (0/6)
+[PASS] constructor con 7 cursos: [Académico] matricula: capacidad agotada (7/6)
+[PASS] constructor con duplicados: [Académico] [Validación] Cursos duplicados en la matrícula
+[PASS] fecha futura: [Académico] [Validación] Fecha de matrícula futura no permitida
+[PASS] agregar curso exitoso
+[PASS] duplicado: [Académico] [Validación] Curso 'SIS206' ya está en la matrícula
+[PASS] eliminar último curso: [Académico] [Validación] La matrícula no puede quedar sin cursos (mínimo 1)
+[PASS] anulada: [Académico] Matrícula anulada — no se puede modificar
+[PASS] diagnóstico ACTIVA/ANULADA
+
+Todas las pruebas pasaron (10).

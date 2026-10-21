@@ -1,0 +1,8 @@
+digraph G { rankdir=BT; graph [fontname="DejaVu Sans", bgcolor="white", pad=0.3, nodesep=0.5, ranksep=0.7]; node [shape=record, fontname="DejaVu Sans", fontsize=11, style=filled, fillcolor="#EAF2FB", color="#1F4E79", penwidth=1.3]; edge [fontname="DejaVu Sans", fontsize=10, color="#1F4E79"];
+ ed [label="{ErrorDominio|+ contexto : dict «Python»|~ErrorDominio() virtual «C++»\l}", fillcolor="#D9E8F7"];
+ edi[label="{ErrorDatoInvalido|- campo_ : string|+ campo() noexcept\l}"];
+ edu[label="{ErrorEntidadDuplicada|- tipo_ : string\l- id_ : int\l|}"];
+ enf[label="{ErrorEntidadNoEncontrada|- tipo_ : string\l- id_ : int\l|}"];
+ eca[label="{ErrorCupoAgotado|- actual_ : int\l- maximo_ : int\l|}"];
+ edi -> ed [arrowhead=empty]; edu -> ed [arrowhead=empty]; enf -> ed [arrowhead=empty]; eca -> ed [arrowhead=empty];
+}

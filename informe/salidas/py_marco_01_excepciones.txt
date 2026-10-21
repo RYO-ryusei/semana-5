@@ -1,0 +1,12 @@
+--- Nota 25 (fuera de rango) ---
+[except ErrorCalificacion] Calificación 25.0 fuera de [0, 20]  <- contexto: {campo='POO II', valor=25.0, rango='[0, 20]'}
+--- Nota 15 (válida) ---
+Sin errores
+--- Capacidad agotada ---
+[except ErrorAcademico] SIS206: capacidad agotada (30/30)  <- contexto: {actual=30, maximo=30, entidad='SIS206'}
+
+--- Encadenamiento: raise ... from ... ---
+Error de dominio : Nota con id=1001 no encontrado  <- contexto: {tipo='Nota', id=1001}
+Causa original   : FileNotFoundError: [Errno 2] No such file or directory: '/ruta/que/no/existe.txt'
+Error de dominio : Nota con id=1001 no encontrado  <- contexto: {tipo='Nota', id=1001}
+Causa original   : ValueError: could not convert string to float: 'abc'

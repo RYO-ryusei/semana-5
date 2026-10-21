@@ -1,0 +1,9 @@
+digraph G { rankdir=TB; graph [fontname="DejaVu Sans", bgcolor="white", pad=0.3, nodesep=0.5, ranksep=0.7]; node [shape=record, fontname="DejaVu Sans", fontsize=11, style=filled, fillcolor="#EAF2FB", color="#1F4E79", penwidth=1.3]; edge [fontname="DejaVu Sans", fontsize=10, color="#1F4E79"];
+ res [label="{Result⟨T⟩|- dato_ : variant⟨T, string⟩  «C++»\l- _valor : T \| None, _error : str \| None  «Python»\l|+ ok(valor) : Result⟨T⟩ \{static\}\l+ fallo(e) : Result⟨T⟩ \{static\}\l+ esExito() : bool\l+ valor() : T\l+ error() : string\l+ map(f) : Result⟨U⟩\l+ andThen(f) : Result⟨U⟩\l}", fillcolor="#D9E8F7"];
+ est [label="{Estudiante|+ codigo : int\l+ nombre : string\l+ ppa : double\l+ cursos : list⟨string⟩\l|}"];
+ f1 [label="{«función»|buscar_estudiante(codigo)\l: Result⟨Estudiante⟩\l}", fillcolor="#E2F0D9", color="#548235"];
+ f2 [label="{«función»|validar_ppa_minimo(est)\l: Result⟨Estudiante⟩\l}", fillcolor="#E2F0D9", color="#548235"];
+ f3 [label="{«función»|inscribir(est, curso)\l: Result⟨string⟩\l}", fillcolor="#E2F0D9", color="#548235"];
+ f1 -> res [style=dashed, arrowhead=open, label="«crea»"]; f2 -> res [style=dashed, arrowhead=open]; f3 -> res [style=dashed, arrowhead=open];
+ f1 -> est [style=dashed, arrowhead=open, label="«usa»"]; f2 -> est [style=dashed, arrowhead=open]; f3 -> est [style=dashed, arrowhead=open];
+}
